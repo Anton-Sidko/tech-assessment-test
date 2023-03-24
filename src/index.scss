@@ -1,0 +1,64 @@
+// Reset styles
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10px;
+}
+
+body {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1;
+  background-color: var(--bgc);
+}
+
+:root {
+  --main-color: #000000;
+  --accent-color: #ffffff;
+  --text-color-1: #717171;
+  --text-color-2: #8d8d8d;
+  --text-color-header: #1f1f1f;
+  --bgc: #fbfbfb;
+  --bgc-2: #131313;
+  --bgc-3: #1e1e1e;
+}
+
+// Fonts
+@font-face {
+  font-family: 'Roboto';
+  font-display: swap;
+  font-style: normal;
+  src: local('Roboto'), url('./fonts/Roboto/Roboto.woff2') format('woff2'),
+    url('./fonts/Roboto/Roboto.woff') format('woff'),
+    url('./fonts/Roboto/Roboto.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-display: swap;
+  font-style: normal;
+  src: local('Poppins'), url('./fonts/Poppins/Poppins.woff2') format('woff2'),
+    url('./fonts/Poppins/Poppins.woff') format('woff'),
+    url('./fonts/Poppins/Poppins.ttf') format('truetype');
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.App {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
