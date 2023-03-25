@@ -1,26 +1,14 @@
-import { Route, Routes } from 'react-router-dom';
-import FeaturesRoutes from './routes/features/FeaturesRoutes.component';
-import Home from './routes/home/Home.component';
-import Navigation from './routes/navigation/Navigation.component';
+import Footer from './components/footer/Footer.component';
+import Header from './components/header/Header.component';
+import Main from './components/main/Main.component';
 
 const App = function () {
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={<Navigation />}
-      >
-        <Route
-          index
-          element={<Home />}
-        />
-
-        <Route
-          path="features/*"
-          element={<FeaturesRoutes />}
-        />
-      </Route>
-    </Routes>
+    <div className="content-wrapper">
+      <Header />
+      <Main />
+      <Footer />
+    </div>
   );
 };
 

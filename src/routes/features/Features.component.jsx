@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import SubMenu from './SubMenu.component';
 
+import arrowDown from '../../assets/arrow-down.svg';
+
 const Features = function ({ path }) {
   // We have small project, hence we don't need use elaborate state-management and can use only state on current component and, if need, props drilling
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
@@ -15,14 +17,22 @@ const Features = function ({ path }) {
     setIsSubmenuOpen(false);
   };
 
-  console.log(path);
   return (
     <>
       <NavLink
         to={path}
         onClick={toggleSubMenu}
+        className={`nav-link with-sub-menu ${
+          isSubmenuOpen ? 'open' : ''
+        }`.trim()}
       >
-        Features
+        <span>Features</span>
+        <i>
+          <img
+            src={arrowDown}
+            alt="arrow down icon"
+          />
+        </i>
       </NavLink>
 
       {/* Toggle sub-menu in our navigation */}

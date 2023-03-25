@@ -1,0 +1,15 @@
+.round-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border: 1px solid var(--main-color);
+  border-radius: 50%;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
