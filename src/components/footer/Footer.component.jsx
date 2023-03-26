@@ -1,6 +1,7 @@
 import ContactInfo from '../contact-info/ContactInfo.component';
 import LinkList from '../link-list/LinkList.component';
 import LogoWrapper from '../logo-wrapper/LogoWrapper.component';
+import SubscribeFormWrapper from '../subscribe-form/SubscribeFormWrapper.component';
 import './Footer.styles.scss';
 
 const Footer = function () {
@@ -50,7 +51,7 @@ const Footer = function () {
           </div>
 
           <div className="footer-info-block subscribe-block">
-            <h4 className="info-block-title">Join Our Newsletter</h4>
+            <SubscribeFormWrapper />
           </div>
         </div>
       </div>

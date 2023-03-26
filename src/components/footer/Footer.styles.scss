@@ -12,6 +12,10 @@ footer {
   .contact-info {
     gap: 2.5rem;
   }
+
+  .subscribe-form-wrapper {
+    margin-top: -14px;
+  }
 }
 
 .footer-info {
@@ -28,7 +32,7 @@ footer {
     width: 35rem;
   }
   &.subscribe-block {
-    width: min(100%, 32rem);
+    width: 32rem;
   }
 }
 
@@ -36,4 +40,40 @@ footer {
   font-weight: 600;
   font-size: 1.8rem;
   margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    padding: 2rem 0;
+
+    .logo-link {
+      margin: 0 auto 2rem;
+    }
+
+    .contact-info {
+      gap: 2rem;
+    }
+
+    .subscribe-form-wrapper {
+      margin-top: 0;
+    }
+  }
+
+  .footer-info-block {
+    font-size: 1.2rem;
+    &.contact-block {
+      width: 15rem;
+    }
+    &.subscribe-block {
+      width: 100%;
+    }
+  }
+
+  .info-block-title {
+    font-size: 1.6rem;
+  }
+
+  .footer-info {
+    padding-left: 0;
+  }
 }

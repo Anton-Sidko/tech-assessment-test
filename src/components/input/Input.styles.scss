@@ -1,0 +1,23 @@
+.input-group {
+  height: 100%;
+  flex: 1;
+}
+
+.form-input {
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  padding: 10px;
+  font-family: inherit;
+  color: inherit;
+
+  &.footer-subscribe-input {
+    height: 100%;
+    background-color: var(--bgc-3);
+    border-radius: 5px 0 0 5px;
+    font-size: 1.2rem;
+  }
+}
