@@ -6,7 +6,7 @@
 }
 
 header {
-  padding: 4.5rem 8rem;
+  padding: 4rem 8rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -20,6 +20,10 @@ header {
     .logo-wrapper,
     .toggle-btn {
       z-index: 1100;
+    }
+
+    .logo-wrapper {
+      filter: brightness(0) invert(1);
     }
 
     .toggle-btn {
@@ -47,11 +51,9 @@ header {
 }
 
 .header-content-wrapper {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: min(100%, 1440px);
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .add-link-wrap {
@@ -68,7 +70,6 @@ header {
   background-color: transparent;
   outline: none;
   cursor: pointer;
-  background-color: orangered;
 
   span {
     display: block;
@@ -119,10 +120,22 @@ header {
 @media only screen and (max-width: 767px) {
   .header-links-wrapper {
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: pink;
+    overflow-y: auto;
+    background-color: var(--main-color);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 20vh;
+
+    .add-link-wrap {
+      filter: brightness(0) invert(1);
+      margin: auto 0 3rem;
+      gap: 3.6rem;
+      align-self: center;
+    }
   }
 }

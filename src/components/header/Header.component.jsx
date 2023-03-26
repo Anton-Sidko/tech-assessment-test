@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import HeaderLinks from '../header-links/HeaderLinks.component';
 import LogoWrapper from '../logo-wrapper/LogoWrapper.component';
 
@@ -8,16 +9,23 @@ const Header = function () {
   // Set window width and depending on it show or hide header links
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // add variable location. For each change this variable menu shall close (on download new page)
+  const location = useLocation();
 
   // Change header padding top and bottom on page scroll
   const [headerPaddingTop, setHeaderPaddingTop] = useState(0);
+
+  // close menu on download new page
+  useEffect(() => {
+    setIsMenuOpen(false);
+    document.querySelector('body').classList.remove('menu-open');
+  }, [location]);
 
   // Dynamically find and set padding. Added event listener
   useEffect(() => {
     const header = document.querySelector('header');
     const currentPadding = header && parseInt(getComputedStyle(header).padding);
     const paddingDecreaseRatio = 0.5;
-    console.log(currentPadding);
     setHeaderPaddingTop(currentPadding);
 
     function handleScroll() {
@@ -41,6 +49,7 @@ const Header = function () {
   }, []);
 
   function toggleMenu() {
+    document.querySelector('body').classList.toggle('menu-open');
     setIsMenuOpen(!isMenuOpen);
   }
 
@@ -61,7 +70,7 @@ const Header = function () {
       }
       className={`${isMenuOpen ? 'open' : ''}`}
     >
-      <div className="header-content-wrapper">
+      <div className="content-wrapper header-content-wrapper">
         <LogoWrapper />
         {windowWidth > 767 ? (
           <HeaderLinks />

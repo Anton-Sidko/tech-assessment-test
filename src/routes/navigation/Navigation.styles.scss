@@ -67,3 +67,39 @@ nav {
     gap: 3rem;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2rem;
+  }
+
+  .nav-link,
+  .nav-sub-link {
+    color: var(--accent-color);
+
+    &.active {
+      font-weight: 700;
+      color: var(--accent-color);
+    }
+
+    &:hover,
+    &:active {
+      font-weight: 700;
+      color: var(--accent-color);
+    }
+  }
+
+  .with-sub-menu {
+    i {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  .nav-sub-menu {
+    position: static;
+    padding: 5px;
+    background-color: var(--main-color);
+  }
+}

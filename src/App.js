@@ -4,11 +4,11 @@ import Main from './components/main/Main.component';
 
 const App = function () {
   return (
-    <div className="content-wrapper">
+    <>
       <Header />
       <Main />
       <Footer />
-    </div>
+    </>
   );
 };
 

@@ -24,7 +24,10 @@ const Main = function () {
   }, []);
 
   return (
-    <main style={{ paddingTop: `${headerHeight}px` }}>
+    <main
+      style={{ paddingTop: `${headerHeight}px` }}
+      className="content-wrapper"
+    >
       {/* Use react-router-dom for site navigation */}
       <Routes>
         <Route
