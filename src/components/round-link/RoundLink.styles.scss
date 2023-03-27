@@ -7,9 +7,32 @@
   padding: 6px;
   border: 1px solid var(--main-color);
   border-radius: 50%;
+  transition: all 0.3s;
 
   img {
     display: block;
     width: 100%;
+  }
+
+  &:hover,
+  &:active {
+    background-color: #1b1b1b;
+    img {
+      filter: invert(1);
+    }
+  }
+
+  &.inverted {
+    background-color: #1b1b1b;
+    img {
+      filter: invert(1);
+    }
+    &:hover,
+    &:active {
+      background-color: #ffffff;
+      img {
+        filter: none;
+      }
+    }
   }
 }

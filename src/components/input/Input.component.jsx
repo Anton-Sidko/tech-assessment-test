@@ -5,17 +5,28 @@ const Input = function ({
   className,
   label,
   handleChange,
+  textarea,
   ...otherProps
 }) {
   return (
     <div className="input-group">
-      <input
-        className={`form-input ${className ? className : ''}`.trim()}
-        placeholder={placeholder}
-        {...otherProps}
-        onChange={handleChange}
-      />
       {label && <label>{label}</label>}
+
+      {!textarea ? (
+        <input
+          className={`form-input ${className ? className : ''}`.trim()}
+          placeholder={placeholder}
+          {...otherProps}
+          onChange={handleChange}
+        />
+      ) : (
+        <textarea
+          className={`form-input ${className ? className : ''}`.trim()}
+          placeholder={placeholder}
+          {...otherProps}
+          onChange={handleChange}
+        />
+      )}
     </div>
   );
 };

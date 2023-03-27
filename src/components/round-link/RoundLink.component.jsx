@@ -1,12 +1,19 @@
 import { Link } from 'react-router-dom';
 import './RoundLink.styles.scss';
 
-const RoundLink = function ({ path, imageSrc, altText, inverted }) {
+const RoundLink = function ({
+  path,
+  imageSrc,
+  altText,
+  inverted,
+  ...otherLinkProps
+}) {
   return (
     <div className="round-link-wrapper">
       <Link
         to={path}
-        className={`${inverted ? 'inverter' : ''} round-link`.trim()}
+        className={`${inverted ? 'inverted' : ''} round-link`.trim()}
+        {...otherLinkProps}
       >
         <img
           src={imageSrc}
