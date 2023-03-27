@@ -1,9 +1,9 @@
 # Mbunity Development - React Front-End Technical Assessment
 
-Link to [preview](https://some-vercel-link) on Vercel.
+Link to [preview](https://mbunity-assessment-test-neon.vercel.app/) on Vercel.
 
 This project created using create-react-app + added SASS for styling.
-For running code you must install all dependencies at first using command:
+For running code you must install all dependencies, at first, using command:
 
 ### `npm i`
 
