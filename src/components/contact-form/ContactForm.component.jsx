@@ -99,56 +99,64 @@ const ContactForm = function () {
             handleChange={handleInputChange}
             name="subject"
             value="subject-1"
+            id="radio-1"
             type="radio"
             label="General Inquiry"
+            labelAfter
             className="contact-form-radio"
           />
           <Input
             handleChange={handleInputChange}
             name="subject"
             value="subject-2"
+            id="radio-2"
             type="radio"
             label="General Inquiry"
+            labelAfter
             className="contact-form-radio"
           />
           <Input
             handleChange={handleInputChange}
             name="subject"
             value="subject-3"
+            id="radio-3"
             type="radio"
             label="General Inquiry"
+            labelAfter
             className="contact-form-radio"
           />
           <Input
             handleChange={handleInputChange}
             name="subject"
             value="subject-4"
+            id="radio-4"
             type="radio"
             label="General Inquiry"
+            labelAfter
             className="contact-form-radio"
           />
         </div>
       </div>
 
-      <Input
-        handleChange={handleInputChange}
-        name="message"
-        value={message}
-        placeholder={'Write your message..'}
-        textarea
-        label="Message"
-        className="contact-form-input"
-      />
+      <div className="message-wrapper">
+        <Input
+          handleChange={handleInputChange}
+          name="message"
+          value={message}
+          placeholder={'Write your message..'}
+          textarea
+          label="Message"
+          className="contact-form-input contact-form-textarea"
+        />
 
-      {isDataSended && (
-        <span className="send-status">Thank you, message sended</span>
-      )}
-
-      <div className="button-wrap">
-        <ButtonSend type="submit">
-          {isLoading ? <Spinner /> : 'Subscribe'}
-        </ButtonSend>
+        {isDataSended && (
+          <span className="send-status">Thank you, message sended</span>
+        )}
       </div>
+
+      <ButtonSend type="submit">
+        {isLoading ? <Spinner /> : 'Send Message'}
+      </ButtonSend>
     </form>
   );
 };

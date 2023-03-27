@@ -11,10 +11,12 @@ const ButtonSend = function ({ children, className, ...otherProps }) {
         className={className}
         {...otherProps}
       />
-      <img
-        src={LetterSend}
-        alt=""
-      />
+      <div className="img-wrap send-img">
+        <img
+          src={LetterSend}
+          alt=""
+        />
+      </div>
     </div>
   );
 };

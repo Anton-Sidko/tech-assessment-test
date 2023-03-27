@@ -1,3 +1,5 @@
+import ContactUs from '../../components/contact-us/ContactUs.component';
+
 const HomePage = function () {
   return (
     <>
@@ -5,6 +7,8 @@ const HomePage = function () {
       <div className="page-subtitle">
         Any question or remarks? Just write us a message!
       </div>
+
+      <ContactUs />
     </>
   );
 };
