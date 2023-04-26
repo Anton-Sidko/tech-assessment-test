@@ -2,7 +2,7 @@
 
 Link to [preview](https://assessment-test-neon.vercel.app) on Vercel.
 
-This project created using create-react-app + added SASS for styling..
+This project created using create-react-app + added SASS for styling.
 For running code you must install all dependencies, at first, using command:
 
 ### `npm i`
