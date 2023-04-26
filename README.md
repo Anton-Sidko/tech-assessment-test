@@ -1,4 +1,4 @@
-# Mbunity Development - React Front-End Technical Assessment
+# React Front-End Technical Assessment
 
 Link to [preview](https://mbunity-assessment-test-neon.vercel.app/) on Vercel.
 
